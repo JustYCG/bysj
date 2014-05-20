@@ -12,8 +12,8 @@
         <property name="connection.password">root</property>	<!-- 数据库用户密码 -->
         <property name="connection.driver_class">				<!-- 数据库驱动类 -->
         	com.mysql.jdbc.Driver</property>
-        <mapping resource="com/sanqing/po/Student.hbm.xml"/>
-        <mapping resource="com/sanqing/po/Teacher.hbm.xml"/>
-        <mapping resource="com/sanqing/po/Subject.hbm.xml"/>	
+        <mapping resource="com/ycg/po/Student.hbm.xml"/>
+        <mapping resource="com/ycg/po/Teacher.hbm.xml"/>
+        <mapping resource="com/ycg/po/Subject.hbm.xml"/>	
     </session-factory>
 </hibernate-configuration>

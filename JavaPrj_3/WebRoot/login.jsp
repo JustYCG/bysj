@@ -78,7 +78,7 @@
 	                          	<td colspan="2"><FONT color="red"><s:actionerror/></FONT></td><!--显示错误信息 -->
 	                          </tr>
 	                          <tr>
-	                            <td width="14%" height="38" class="top_hui_text"><span class="login_txt">编号：&nbsp;&nbsp; </span></td>
+	                            <td width="14%" height="38" class="top_hui_text"><span class="login_txt">账 号：&nbsp;&nbsp; </span></td>
 	                            <td height="38" colspan="2" class="top_hui_text"><input name="id" class="editbox4" value="" size="20">                            </td>
 	                          </tr>
 	                          <tr>
@@ -114,7 +114,7 @@
 	  <tr>
 	    <td height="20"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="login-buttom-bg">
 	      <tr>
-	        <td align="center"><span class="login-buttom-txt STYLE1">在线考试系统Copyright &copy; 2009-2010 </span></td>
+	        <td align="center"><span class="login-buttom-txt STYLE1">在线考试系统Copyright &copy; 2010-2014 </span></td>
 	      </tr>
 	    </table></td>
 	  </tr>

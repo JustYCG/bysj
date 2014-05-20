@@ -2,7 +2,7 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <html>
   <head>
-    <title>试题管理页面</title>
+    <title>学生管理页面</title>
 	<style type="text/css">
 	<!--
 	body {
@@ -12,7 +12,7 @@
 		margin-bottom: 0px;
 		background-color: #EEF2FB;
 	}
-	#manageSubject table  td{
+	#managestudent table  td{
 		font-size:12px;
 	}
 	-->
@@ -25,7 +25,7 @@
     <td width="17" valign="top" background="images/mail_leftbg.gif"><img src="images/left-top-right.gif" width="17" height="29" /></td>
     <td valign="top" background="images/content-bg.gif"><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="left_topbg" id="table2">
       <tr>
-        <td height="31"><div class="titlebt">管理试题</div></td>
+        <td height="31"><div class="titlebt">管理学生</div></td>
       </tr>
     </table></td>
     <td width="16" valign="top" background="images/mail_rightbg.gif"><img src="images/nav-right-bg.gif" width="16" height="29" /></td>
@@ -38,39 +38,37 @@
         </tr>
       <tr>
         <td valign="middle"><span class="left_txt">
-			<div id="manageSubject" align="center"><!--管理试题-->
+			<div id="manageStudents" align="center"><!--管理学生-->
 			<table width="95%" cellspacing="10">
 				  <tr align="center">
-					<td>试题编号</td>
-					<td>试题标题</td>
-					<td>正确答案</td>
-					<td>查看试题</td>
-					<td>更新试题</td>
-					<td>删除试题</td>
+					<td>学生学号</td>
+					<td>学生姓名</td>
+					<td>本次成绩</td>
+					<td>更新信息</td>
+					<td>删除信息</td>
 				  </tr>
-				  <s:iterator value="#request.subjects" var="subject">
+				  <s:iterator value="#request.students" var="student">
 				  	 <tr align="center">
-							<td>${subject.subjectID}</td>
-							<td align="left">${subject.subjectTitle}</td>
-							<td>${subject.subjectAnswer}</td>
-							<td><a href="subjectParticular.action?subjectID=${subject.subjectID}">查看</a></td>
-							<td><a href="subjectUpadateBefore.action?subjectID=${subject.subjectID}">更新</a></td>
-							<td><a href="subjectDelete.action?subjectID=${subject.subjectID}">删除</a></td>
+							<td>${student.studentID}</td>
+							<td align="left">${student.studentName}</td>
+							<td>${student.result}</td>
+							<td><a href="studentUpdateBefore.action?studentID=${student.studentID}">更新</a></td>
+							<td><a href="studentDelete.action?studentID=${student.studentID}">删除</a></td>
 					  </tr>
 				  </s:iterator>	
 				  <tr>
 				  	<td colspan="6" align="center">
 				  		共${page.totalCount}条纪录，当前第${page.currentPage}/${page.totalPage}页，每页${page.everyPage}条纪录
 				  	<s:if test="#request.page.hasPrePage">
-                		<a href="subjectQuery.action?currentPage=1">首页</a> | 
-                		<a href="subjectQuery.action?currentPage=${page.currentPage - 1}">上一页</a> | 
+                		<a href="studentQuery.action?currentPage=1">首页</a> | 
+                		<a href="studentQuery.action?currentPage=${page.currentPage - 1}">上一页</a> | 
                		</s:if>
                		<s:else>
                		首页 | 上一页 | 
                		</s:else>
                		<s:if test="#request.page.hasNextPage">
-                		<a href="subjectQuery.action?currentPage=${page.currentPage + 1}">下一页</a> | 
-                		<a href="subjectQuery.action?currentPage=${page.totalPage}">尾页</a>
+                		<a href="studentQuery.action?currentPage=${page.currentPage + 1}">下一页</a> | 
+                		<a href="studentQuery.action?currentPage=${page.totalPage}">尾页</a>
                		</s:if>
                		<s:else>
                		下一页 | 尾页
